@@ -21,6 +21,9 @@ export function useLenisScroll() {
 
         lenis.on('scroll', ScrollTrigger.update);
 
+        // Expose instance globally so the depth gallery can pause/resume it
+        window.__lenis = lenis;
+
         // Handle anchor scroll on route change
         const handleHashScroll = () => {
             if (window.location.hash) {

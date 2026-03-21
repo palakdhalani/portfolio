@@ -96,7 +96,7 @@ export default function AboutMeSection() {
                         transition={{ duration: 1, delay: 0.2 }}
                         className="text-xl md:text-2xl text-white/80 font-medium leading-relaxed"
                     >
-                        With over five years of experience in design, I specialize in branding, web design, and user experience. 
+                        With six months of experience in design, I specialize in UI, web design, and user experience. 
                     </motion.p>
                     <motion.p 
                         initial={{ opacity: 0, y: 30 }}

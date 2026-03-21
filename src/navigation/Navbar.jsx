@@ -125,8 +125,8 @@ function FullScreenMenu({ isOpen, onClose }) {
                                 className="mb-10"
                             >
                                 <h4 className="text-[#f7986f] text-xs font-bold tracking-[0.2em] uppercase mb-4">Get in touch</h4>
-                                <a href="mailto:palakdhalani17@gmail.com" className="text-xl md:text-2xl text-white hover:text-white/70 transition-colors font-light relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-white/30 after:hover:bg-white transition-all">
-                                    palakdhalani17@gmail.com
+                                <a href="mailto:hello@palak.dev" className="text-xl md:text-2xl text-white hover:text-white/70 transition-colors font-light relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-white/30 after:hover:bg-white transition-all">
+                                    hello@palak.dev
                                 </a>
                             </motion.div>
 
