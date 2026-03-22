@@ -198,20 +198,7 @@ export default function LandscapeHero() {
                     <div className="hero-overlay absolute inset-0 bg-black" style={{ opacity: 0.35 }} />
                 </div>
 
-                {/* ── Loading bar (shown while frames decode) ── */}
-                {!ready && (
-                    <div className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm">
-                        <div className="w-48 h-[2px] bg-white/10 rounded-full overflow-hidden">
-                            <div
-                                className="h-full bg-white rounded-full transition-all duration-200"
-                                style={{ width: `${loadProgress}%` }}
-                            />
-                        </div>
-                        <span className="mt-4 text-[10px] uppercase tracking-[0.3em] text-white/40">
-                            Loading — {loadProgress}%
-                        </span>
-                    </div>
-                )}
+                {/* ── Loading bar removed: WebP frame decoding happens completely silently in background now ── */}
 
                 {/* ── Slide texts ── */}
                 <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
