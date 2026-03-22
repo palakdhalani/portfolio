@@ -8,6 +8,14 @@ gsap.registerPlugin(ScrollTrigger);
 export default function ProjectScrollShowcase() {
     const sectionRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(0);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
 
     useEffect(() => {
         const total = projects.length;
@@ -56,7 +64,7 @@ export default function ProjectScrollShowcase() {
             <div className="absolute top-16 w-full text-center pointer-events-none z-10">
                 <p className="text-white/20 font-mono text-[10px] uppercase tracking-[0.8em] mb-3">Work Showcase</p>
                 <h2 className="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter leading-none italic">
-                      Freelance Projects
+                    Freelance Projects
                 </h2>
             </div>
 
@@ -94,9 +102,9 @@ export default function ProjectScrollShowcase() {
                             key={project.id}
                             className="showcase-card-wrap absolute"
                             style={{
-                                width: '65vw',
+                                width: isMobile ? '85vw' : '65vw',
                                 maxWidth: 900,
-                                height: '90%',
+                                height: isMobile ? '75%' : '90%',
                                 transform: `translateX(${translateX}%) scale(${scale}) rotateY(${rotateY}deg)`,
                                 opacity,
                                 filter: `blur(${blur}px)`,
