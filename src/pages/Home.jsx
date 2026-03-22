@@ -1,6 +1,6 @@
 import React from 'react';
 import LandscapeHero from '../components/home/LandscapeHero';
-import HorizontalAccordion from '../components/home/HorizontalAccordion';
+import TestimonialSection from '../components/home/TestimonialSection';
 import ServicesSection from '../sections/ServicesSection';
 import PortfolioSection from '../sections/PortfolioSection';
 import GetInTouchSection from '../sections/GetInTouchSection';
@@ -12,8 +12,8 @@ export default function Home() {
             <ServicesSection />
             <PortfolioSection />
 
-            {/* "Choose Your Hero" Accordion Section */}
-            <HorizontalAccordion />
+            {/* "Choose Your Hero" Accordion Section Swapped for Custom Cloneable */}
+            <TestimonialSection />
 
             {/* Get In Touch Contact Section */}
             <GetInTouchSection />
